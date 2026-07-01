@@ -1,10 +1,10 @@
 import './About.css'
 
 const FACTS = [
-  { label: 'foco', value: 'DSLs & sistemas de terminal' },
+  { label: 'foco', value: 'APIs & sistemas de terminal' },
   { label: 'formação', value: 'programador universitário' },
   { label: 'linguagens', value: '6, de F# a Python' },
-  { label: 'base', value: 'Brasil' },
+  { label: 'origem', value: 'Brasil' },
 ]
 
 export default function About() {

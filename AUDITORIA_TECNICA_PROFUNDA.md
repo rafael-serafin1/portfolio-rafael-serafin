@@ -276,7 +276,7 @@ Se o objetivo era criar um portfolio visual/site, recomenda-se:
    - Align: x-align, y-align, gap
 
 4. **Recursos Avançados**
-   - Layout system com `depth` (z-index)
+   - Layout system com `layer` (z-index)
    - Snippets (reutilização de estilos)
    - Hot-reload via `watch` mode
    - Diff renderer (apenas mudanças renderizam)

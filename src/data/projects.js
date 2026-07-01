@@ -39,34 +39,6 @@ export const projects = [
     links: { github: 'https://github.com/rafael-serafin1/ptml' },
   },
   {
-    id: 'vectora',
-    name: 'Vectora',
-    full: 'DSL declarativa de animações',
-    file: 'interpreter.ts',
-    lang: 'TypeScript',
-    tags: ['TypeScript', 'DSL', 'Compilers', 'Frontend'],
-    pitch: 'Escreve animações CSS como seletor + gatilho + ação, sem event listener nenhum espalhado pelo código.',
-    description:
-      'Segunda linguagem própria do portfólio: lexer, parser e um interpretador que traduz uma sintaxe curta em manipulação de DOM. Um catálogo com mais de 50 animações pré-construídas — e cada uma sabe automaticamente como se reverter.',
-    highlights: [
-      'Lexer + parser + interpreter próprios em TypeScript puro',
-      'Catálogo com 50+ animações classificadas por família/direção',
-      'Reversão automática — "entrada" e "saída" derivadas da mesma metadata',
-      'Suporte a seletores de tag, classe e id, com múltiplos gatilhos',
-    ],
-    snippet: `div {
-  window.onLoad {
-    text: land(600ms);
-    color: fadeIn(400ms);
-  };
-  onSing.click {
-    transform: rotate(360deg, 800ms);
-  };
-}`,
-    status: 'estacionado por enquanto.',
-    links: { github: 'https://github.com/rafael-serafin1/vectora' },
-  },
-  {
     id: 'personal-api',
     name: 'Personal API',
     full: 'API REST para personal trainers',
@@ -117,6 +89,34 @@ setTreinos(data)`,
     links: { github: 'https://github.com/rafael-serafin1/crud-tecnico-application' },
   },
   {
+    id: 'vectora',
+    name: 'Vectora',
+    full: 'DSL declarativa de animações',
+    file: 'interpreter.ts',
+    lang: 'TypeScript',
+    tags: ['TypeScript', 'DSL', 'Compilers', 'Frontend'],
+    pitch: 'Escreve animações CSS como seletor + gatilho + ação, sem event listener nenhum espalhado pelo código.',
+    description:
+      'Segunda linguagem própria do portfólio: lexer, parser e um interpretador que traduz uma sintaxe curta em manipulação de DOM. Um catálogo com mais de 50 animações pré-construídas — e cada uma sabe automaticamente como se reverter.',
+    highlights: [
+      'Lexer + parser + interpreter próprios em TypeScript puro',
+      'Catálogo com 50+ animações classificadas por família/direção',
+      'Reversão automática — "entrada" e "saída" derivadas da mesma metadata',
+      'Suporte a seletores de tag, classe e id, com múltiplos gatilhos',
+    ],
+    snippet: `div {
+  window.onLoad {
+    text: land(600ms);
+    color: fadeIn(400ms);
+  };
+  onSing.click {
+    transform: rotate(360deg, 800ms);
+  };
+}`,
+    status: 'estacionado por enquanto.',
+    links: { github: 'https://github.com/rafael-serafin1/vectora' },
+  },
+  {
     id: 'clint-o-bot',
     name: 'Clint-o-bot',
     full: 'Bot de automação para Discord',
@@ -137,7 +137,7 @@ async def on_voice_state_update(m, before, after):
     if after.channel and after.channel.name == "Criar canal":
         ch = await criar_canal(m)
         await m.move_to(ch)`,
-    status: 'em produção',
+    status: 'finalizado',
     links: { github: 'https://github.com/rafael-serafin1/clint-o-bot' },
   },
 ]

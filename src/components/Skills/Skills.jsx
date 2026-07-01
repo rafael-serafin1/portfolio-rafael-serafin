@@ -3,11 +3,11 @@ import './Skills.css'
 const GROUPS = [
   {
     title: 'linguagens',
-    items: ['JavaScript', 'TypeScript', 'F#', 'Java', 'Python', 'C / C++', 'C# / .NET'],
+    items: ['JavaScript / TypeScript', 'F#', 'Java', 'Python', 'C / C++', 'C# / .NET'],
   },
   {
     title: 'front-end',
-    items: ['React', 'Vite', 'SCSS', 'HTML/CSS'],
+    items: ['React', 'Vite', 'TailwindCSS', 'SCSS', 'HTML/CSS'],
   },
   {
     title: 'back-end & dados',
@@ -15,7 +15,7 @@ const GROUPS = [
   },
   {
     title: 'linguagens & ferramentas próprias',
-    items: ['Design de DSLs', 'Lexers & Parsers', 'ANSI rendering', 'discord.py'],
+    items: ['design de softwares', 'APIs Restfuls', 'ANSI rendering', 'frameworks'],
   },
 ]
 

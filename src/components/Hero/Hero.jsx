@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import './Hero.css'
 
-const SOURCE = `<?ptml encoding="UTF-8" author="rafael"?>
+const SOURCE = `<?ptml encoding="UTF-8"?>
 <terminal x-align="center">
   <block title="rafael.serafin" border="rounded">
-    <column gap="1">
-      <text foreground="amber" weight="bold">
+    <column>
+      <text foreground="gold" font="bold">
         Rafael Engel Serafin
       </text>
-      <text>desenvolvedor &amp; language designer</text>
-      <hr />
+      <text>desenvolvedor & language designer</text>
+      <hr orientation="horizontal" />
       <row gap="2">
-        <text foreground="teal">constrói</text>
+        <text foreground="lightblue">constrói</text>
         <text>DSLs, APIs e ferramentas de terminal</text>
       </row>
     </column>
@@ -25,14 +25,14 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="hero__inner">
         <div className="hero__intro">
-          <p className="hero__eyebrow mono">// portfólio · 2026</p>
+          <p className="hero__eyebrow mono"> portfólio · 2026</p>
           <h1 className="hero__title">
             Escrevo interfaces
             <br />
             como quem escreve <span className="hero__accent">linguagens</span>.
           </h1>
           <p className="hero__lede">
-            Desenvolvedor universitário focado em linguagens de domínio específico,
+            Desenvolvedor universitário focado em desenvolvimento fullstack,
             sistemas de terminal e APIs — do parser à produção.
           </p>
           <div className="hero__cta">
@@ -82,7 +82,7 @@ export default function Hero() {
                   <div className="hero__box">
                     <span className="hero__box-title">rafael.serafin</span>
                     <p className="hero__box-name mono">Rafael Engel Serafin</p>
-                    <p className="hero__box-role">desenvolvedor &amp; language designer</p>
+                    <p className="hero__box-role">desenvolvedor de softwares &amp; language designer</p>
                     <div className="hero__rule" />
                     <p className="hero__box-line">
                       <span className="hero__tag-teal mono">constrói</span> DSLs, APIs e
