@@ -1,0 +1,31 @@
+// variáveis SCSS
+$global-settings: (
+    margin: 0,
+    padding: 0,
+    box-sizing: border-box
+);
+
+$root-settings: (
+    width: 100vw,
+    height: 100vh,
+
+);
+
+$body-settings: (
+    min-height: 100vh,
+    font-family: "Arial, Helvetica, sans-serif",
+    line-height: 1.5,
+    color: #222,
+    background: #fff,
+);
+
+$global-font-size: 16px;
+
+// responsividade e media
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);

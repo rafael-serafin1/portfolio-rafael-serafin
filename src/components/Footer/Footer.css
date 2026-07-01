@@ -1,0 +1,28 @@
+.footer {
+  border-top: 1px solid #21242f;
+  padding-block: 1.5rem;
+}
+
+.footer__inner {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .footer__inner {
+    padding-inline: 3rem;
+  }
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  color: #5c6178;
+}
+
+.footer__built {
+  color: #5c6178;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,27 @@
+@use "sass:meta";
+@use "vars";
+// mixins SCSS
+
+@mixin apply($map) {
+    @if (meta.type-of($map) != "map") {
+        @error "Mapa para aplicação de estilização inválido: #{$map}";
+    }
+
+    @each $prop, $value in $map {
+        #{$prop}: #{$value};
+    }
+}
+
+@mixin breakpoint($map) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

@@ -1,0 +1,59 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// Barra de título estilo editor/terminal, reaproveitada em todo o site.
+// A aba mostra sempre o nome de arquivo REAL do projeto (Program.fs,
+// interpreter.ts, samplebot.py...) — não é decoração, é o artefato certo.
+.tw {
+  @include m.window-chrome;
+}
+
+.tw__bar {
+  display: flex;
+  align-items: center;
+  gap: v.$space-3;
+  padding: v.$space-3 v.$space-4;
+  background: v.$color-panel-alt;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.tw__dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+
+  span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: v.$color-border;
+  }
+
+  span:nth-child(1) { background: #e0765680; }
+  span:nth-child(2) { background: #f2a63d80; }
+  span:nth-child(3) { background: #5fb8a680; }
+}
+
+.tw__tab {
+  font-family: v.$font-mono;
+  font-size: v.$fs-2xs;
+  color: v.$color-muted;
+  background: v.$color-panel;
+  border: 1px solid v.$color-border;
+  border-bottom: none;
+  padding: v.$space-1 v.$space-3;
+  border-radius: 5px 5px 0 0;
+  transform: translateY(1px);
+}
+
+.tw__meta {
+  margin-left: auto;
+  font-family: v.$font-mono;
+  font-size: v.$fs-2xs;
+  color: v.$color-faint;
+  white-space: nowrap;
+}
+
+.tw__body {
+  padding: v.$space-5;
+}

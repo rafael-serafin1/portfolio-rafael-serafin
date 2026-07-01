@@ -1,0 +1,85 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.contact__inner {
+  @include m.container;
+  display: grid;
+  gap: v.$space-7;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+  }
+}
+
+.section__eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-4;
+  display: block;
+}
+
+.contact__title {
+  font-size: v.$fs-2xl;
+  max-width: 20ch;
+}
+
+.contact__lede {
+  margin-top: v.$space-4;
+  max-width: 40ch;
+}
+
+.contact__body {
+  padding-block: v.$space-5;
+}
+
+.contact__line {
+  font-size: v.$fs-xs;
+  color: v.$color-muted;
+  margin-bottom: v.$space-5;
+}
+
+.contact__prompt {
+  color: v.$color-teal;
+}
+
+.contact__list {
+  display: grid;
+  gap: v.$space-2;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: v.$space-3;
+    padding: v.$space-3 v.$space-4;
+    border: 1px solid v.$color-border;
+    border-radius: v.$radius-sm;
+    color: v.$color-cream;
+    transition: border-color v.$transition-base, background-color v.$transition-base;
+    @include m.focus-ring;
+
+    svg {
+      color: v.$color-faint;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      border-color: v.$color-amber;
+      background: v.$color-panel-alt;
+
+      svg {
+        color: v.$color-amber;
+      }
+    }
+  }
+}
+
+.contact__label {
+  font-size: v.$fs-xs;
+  color: v.$color-faint;
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.contact__value {
+  font-size: v.$fs-sm;
+}

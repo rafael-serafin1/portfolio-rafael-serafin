@@ -1,0 +1,60 @@
+@use "scss/vars";
+@use "scss/mixins";
+@use "scss/fun";
+/*
+    CONFIGURAÇÕES GLOBAIS (tags apenas)
+*/
+
+
+*,
+*::before,
+*::after {
+    @include mixins.apply(vars.$global-settings);
+}
+
+html {
+    font-size: vars.$global-font-size;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include mixins.apply(vars.$body-settings);
+}
+
+html, body, main, #root {
+    @include mixins.apply(vars.$root-settings);
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

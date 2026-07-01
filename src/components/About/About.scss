@@ -1,0 +1,67 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.about__inner {
+  @include m.container;
+  display: grid;
+  gap: v.$space-7;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+.section__eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-4;
+  display: block;
+}
+
+.about__title {
+  font-size: v.$fs-2xl;
+  line-height: 1.2;
+  max-width: 22ch;
+}
+
+.about__body {
+  margin-top: v.$space-5;
+  max-width: 62ch;
+  font-size: v.$fs-base;
+
+  strong {
+    color: v.$color-cream;
+  }
+}
+
+.about__facts {
+  display: grid;
+  gap: 0;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  align-self: start;
+}
+
+.about__fact {
+  display: flex;
+  justify-content: space-between;
+  gap: v.$space-4;
+  padding: v.$space-4 v.$space-5;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid v.$color-border-soft;
+  }
+
+  dt {
+    color: v.$color-faint;
+    font-size: v.$fs-2xs;
+  }
+
+  dd {
+    margin: 0;
+    text-align: right;
+    color: v.$color-cream;
+    font-size: v.$fs-sm;
+  }
+}

@@ -1,0 +1,102 @@
+.contact__inner {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .contact__inner {
+    padding-inline: 3rem;
+  }
+}
+.contact__inner {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 900px) {
+  .contact__inner {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+  }
+}
+
+.section__eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  color: #5fb8a6;
+  letter-spacing: 0.02em;
+}
+.section__eyebrow::before {
+  content: "// ";
+  color: #5c6178;
+}
+.section__eyebrow {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  max-width: 20ch;
+}
+
+.contact__lede {
+  margin-top: 1rem;
+  max-width: 40ch;
+}
+
+.contact__body {
+  padding-block: 1.5rem;
+}
+
+.contact__line {
+  font-size: 0.8125rem;
+  color: #99a0b6;
+  margin-bottom: 1.5rem;
+}
+
+.contact__prompt {
+  color: #5fb8a6;
+}
+
+.contact__list {
+  display: grid;
+  gap: 0.5rem;
+}
+.contact__list a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2c3140;
+  border-radius: 6px;
+  color: #f4efe2;
+  transition: border-color 220ms cubic-bezier(0.16, 1, 0.3, 1), background-color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.contact__list a:focus-visible {
+  outline: 2px solid #f2a63d;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.contact__list a svg {
+  color: #5c6178;
+  flex-shrink: 0;
+}
+.contact__list a:hover {
+  border-color: #f2a63d;
+  background: #20242f;
+}
+.contact__list a:hover svg {
+  color: #f2a63d;
+}
+
+.contact__label {
+  font-size: 0.8125rem;
+  color: #5c6178;
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.contact__value {
+  font-size: 0.9375rem;
+}/*# sourceMappingURL=Contact.css.map */

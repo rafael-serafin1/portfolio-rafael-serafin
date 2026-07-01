@@ -1,0 +1,158 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.projects__inner {
+  @include m.container;
+}
+
+.section__eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-4;
+  display: block;
+}
+
+.projects__title {
+  font-size: v.$fs-2xl;
+  max-width: 30ch;
+}
+
+.projects__lede {
+  margin-top: v.$space-3;
+  font-size: v.$fs-base;
+}
+
+.projects__grid {
+  margin-top: v.$space-7;
+  display: grid;
+  gap: v.$space-6;
+}
+
+// --- card individual ------------------------------------------------------
+
+.project {
+  transition: border-color v.$transition-base, transform v.$transition-base;
+
+  &:hover {
+    border-color: v.$color-amber-dim;
+  }
+}
+
+.project__body {
+  display: grid;
+  gap: v.$space-6;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}
+
+.project__snippet {
+  margin: 0;
+  padding: v.$space-4;
+  background: v.$color-ink;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-sm;
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: v.$color-teal;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.project__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: v.$space-3;
+  flex-wrap: wrap;
+}
+
+.project__name {
+  font-size: v.$fs-xl;
+}
+
+.project__status {
+  font-size: v.$fs-2xs;
+  color: v.$color-teal;
+  border: 1px solid rgba(95, 184, 166, 0.35);
+  border-radius: 999px;
+  padding: 2px v.$space-3;
+  white-space: nowrap;
+}
+
+.project__full {
+  margin-top: v.$space-1;
+  font-size: v.$fs-xs;
+  color: v.$color-faint;
+}
+
+.project__pitch {
+  margin-top: v.$space-4;
+  color: v.$color-cream;
+  font-size: v.$fs-base;
+}
+
+.project__description {
+  margin-top: v.$space-3;
+  max-width: 68ch;
+}
+
+.project__highlights {
+  margin-top: v.$space-4;
+  display: grid;
+  gap: v.$space-2;
+
+  li {
+    position: relative;
+    padding-left: v.$space-5;
+    font-size: v.$fs-sm;
+    color: v.$color-muted;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: v.$color-amber;
+    }
+  }
+}
+
+.project__footer {
+  margin-top: v.$space-5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$space-4;
+  flex-wrap: wrap;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+
+  li {
+    font-family: v.$font-mono;
+    font-size: 0.65rem;
+    color: v.$color-faint;
+    border: 1px solid v.$color-border;
+    border-radius: 999px;
+    padding: 2px v.$space-3;
+  }
+}
+
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$color-amber;
+  transition: gap v.$transition-base;
+  @include m.focus-ring;
+
+  &:hover {
+    gap: v.$space-3;
+  }
+}

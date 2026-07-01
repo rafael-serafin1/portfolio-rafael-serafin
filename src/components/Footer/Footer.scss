@@ -1,0 +1,21 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.footer {
+  border-top: 1px solid v.$color-border-soft;
+  padding-block: v.$space-5;
+}
+
+.footer__inner {
+  @include m.container;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+  font-size: v.$fs-2xs;
+  color: v.$color-faint;
+}
+
+.footer__built {
+  color: v.$color-faint;
+}

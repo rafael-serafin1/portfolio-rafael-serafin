@@ -1,0 +1,209 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.hero {
+  padding-block: v.$space-8 v.$space-9;
+}
+
+.hero__inner {
+  @include m.container;
+  display: grid;
+  gap: v.$space-8;
+  align-items: center;
+
+  @media (min-width: 960px) {
+    grid-template-columns: 1.05fr 1fr;
+    gap: v.$space-7;
+  }
+}
+
+.hero__eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-4;
+}
+
+.hero__title {
+  font-size: v.$fs-3xl;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero__accent {
+  color: v.$color-amber;
+}
+
+.hero__lede {
+  margin-top: v.$space-5;
+  max-width: 46ch;
+  font-size: v.$fs-lg;
+  color: v.$color-muted;
+}
+
+.hero__cta {
+  display: flex;
+  gap: v.$space-4;
+  margin-top: v.$space-6;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  padding: v.$space-3 v.$space-5;
+  border-radius: v.$radius-sm;
+  border: 1px solid transparent;
+  transition: transform v.$transition-base, background-color v.$transition-base, border-color v.$transition-base;
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+  @include m.focus-ring;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.btn--primary {
+  background: v.$color-amber;
+  color: v.$color-ink;
+  font-weight: 700;
+
+  &:hover {
+    background: #f5b158;
+  }
+}
+
+.btn--ghost {
+  border-color: v.$color-border;
+  color: v.$color-cream;
+
+  &:hover {
+    border-color: v.$color-amber;
+    color: v.$color-amber;
+  }
+}
+
+// --- janela do hero -----------------------------------------------------
+
+.hero__window {
+  animation: rise 700ms v.$ease-out both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include m.reduced-motion {
+  .hero__window {
+    animation: none;
+  }
+}
+
+.hero__toggle {
+  margin-left: auto;
+  display: flex;
+  gap: 2px;
+  background: v.$color-ink;
+  border: 1px solid v.$color-border;
+  border-radius: 999px;
+  padding: 3px;
+
+  button {
+    font-family: v.$font-mono;
+    font-size: 0.65rem;
+    color: v.$color-faint;
+    background: transparent;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 999px;
+    transition: background-color v.$transition-base, color v.$transition-base;
+    @include m.focus-ring;
+
+    &.is-active {
+      background: v.$color-panel-alt;
+      color: v.$color-amber;
+    }
+  }
+}
+
+.hero__body {
+  min-height: 220px;
+}
+
+.hero__source {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: v.$color-muted;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.hero__box {
+  border: 1px dashed v.$color-border;
+  border-radius: v.$radius-sm;
+  padding: v.$space-5;
+  position: relative;
+}
+
+.hero__box-title {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  background: v.$color-panel;
+  padding-inline: v.$space-2;
+  font-family: v.$font-mono;
+  font-size: v.$fs-2xs;
+  color: v.$color-faint;
+}
+
+.hero__box-name {
+  font-size: v.$fs-xl;
+  font-weight: 700;
+  color: v.$color-amber;
+}
+
+.hero__box-role {
+  margin-top: v.$space-1;
+  color: v.$color-cream;
+}
+
+.hero__rule {
+  height: 1px;
+  background: v.$color-border;
+  margin-block: v.$space-4;
+}
+
+.hero__box-line {
+  color: v.$color-muted;
+}
+
+.hero__tag-teal {
+  color: v.$color-teal;
+}
+
+.hero__status {
+  display: flex;
+  align-items: center;
+  gap: v.$space-2;
+  padding: v.$space-3 v.$space-4;
+  border-top: 1px solid v.$color-border;
+  font-size: v.$fs-2xs;
+  color: v.$color-faint;
+}
+
+.hero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: v.$color-teal;
+  box-shadow: 0 0 0 3px rgba(95, 184, 166, 0.15);
+}

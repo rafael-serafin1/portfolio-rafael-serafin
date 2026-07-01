@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+@mixin container {
+  width: 100%;
+  max-width: v.$max-width;
+  margin-inline: auto;
+  padding-inline: v.$space-5;
+
+  @media (min-width: 640px) {
+    padding-inline: v.$space-7;
+  }
+}
+
+// Janela estilo terminal/editor — usada no hero e em cada card de projeto,
+// com uma "aba" nomeada como o arquivo real do repositório.
+@mixin window-chrome {
+  background: v.$color-panel;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+  box-shadow: v.$shadow-panel;
+  overflow: hidden;
+}
+
+@mixin eyebrow {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$color-teal;
+  letter-spacing: 0.02em;
+
+  &::before {
+    content: '// ';
+    color: v.$color-faint;
+  }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid v.$color-amber;
+    outline-offset: 3px;
+    border-radius: v.$radius-sm;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

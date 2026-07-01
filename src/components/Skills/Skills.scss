@@ -1,0 +1,80 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.skills__inner {
+  @include m.container;
+}
+
+.section__eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-4;
+  display: block;
+}
+
+.skills__title {
+  font-size: v.$fs-2xl;
+  max-width: 26ch;
+}
+
+.skills__code {
+  margin-top: v.$space-6;
+  padding: v.$space-4 v.$space-5;
+  background: v.$color-panel;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-sm;
+  font-size: v.$fs-xs;
+  color: v.$color-muted;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.skills__kw {
+  color: v.$color-rose;
+}
+
+.skills__val {
+  color: v.$color-cream;
+}
+
+.skills__str {
+  color: v.$color-teal;
+}
+
+.skills__groups {
+  margin-top: v.$space-7;
+  display: grid;
+  gap: v.$space-6;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skills__group-title {
+  font-size: v.$fs-xs;
+  color: v.$color-faint;
+  margin-bottom: v.$space-3;
+  text-transform: lowercase;
+}
+
+.skills__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+}
+
+.skills__tag {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$color-cream;
+  background: v.$color-panel;
+  border: 1px solid v.$color-border;
+  border-radius: 999px;
+  padding: v.$space-1 v.$space-4;
+  transition: border-color v.$transition-base, color v.$transition-base;
+
+  &:hover {
+    border-color: v.$color-amber;
+    color: v.$color-amber;
+  }
+}
