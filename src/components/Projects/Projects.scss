@@ -1,5 +1,6 @@
 @use '../../styles/variables' as v;
 @use '../../styles/mixins' as m;
+@use '../../styles/keyframes' as k;
 
 .projects__inner {
   @include m.container;
@@ -142,6 +143,52 @@
   }
 }
 
+.project__item {
+  position: relative;
+  padding: 15px 30px;
+  background: #1d1d1d;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+  overflow: hidden;
+}
+
+.project__item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: v.$gradiente;
+  opacity: 0;
+  transition: opacity .3s;
+  z-index: -2;
+}
+
+.project__item::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #1d1d1d;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.project__item:hover {
+  transform: scale(1.08);
+  box-shadow: v.$shadow-item;
+  cursor: pointer;
+}
+
+.project__item:hover::before {
+  opacity: 1;
+  animation: border-spin 1.5s linear infinite;
+}
+
 .project__link {
   display: inline-flex;
   align-items: center;
@@ -155,4 +202,11 @@
   &:hover {
     gap: v.$space-3;
   }
+}
+
+.project__code {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
 }

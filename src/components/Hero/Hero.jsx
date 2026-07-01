@@ -71,7 +71,7 @@ export default function Hero() {
                 </button>
               </div>
             </div>
-
+            <br />
             <div className="tw__body hero__body">
               {view === 'source' ? (
                 <pre className="hero__source mono" aria-label="Código-fonte em PTML">

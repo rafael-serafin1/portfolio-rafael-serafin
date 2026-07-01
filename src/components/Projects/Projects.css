@@ -1,4 +1,19 @@
 @charset "UTF-8";
+@keyframes border-spin {
+  to {
+    --angle: $full-circle-ang;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .projects__inner {
   width: 100%;
   max-width: 1180px;
@@ -152,6 +167,48 @@
   padding: 2px 0.75rem;
 }
 
+.project__item {
+  position: relative;
+  padding: 15px 30px;
+  background: #1d1d1d;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project__item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(gfrom var(--angle), gtransparent 0deg, gtransparent 300deg, grgba(255, 235, 120, 0.2) 320deg, grgba(255, 245, 180, 1) 340deg, grgba(255, 235, 120, 0.2) 355deg, gtransparent 360deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -2;
+}
+
+.project__item::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #1d1d1d;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.project__item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 225, 80, 0.25);
+  cursor: pointer;
+}
+
+.project__item:hover::before {
+  opacity: 1;
+  animation: border-spin 1.5s linear infinite;
+}
+
 .project__link {
   display: inline-flex;
   align-items: center;
@@ -168,4 +225,10 @@
 }
 .project__link:hover {
   gap: 0.75rem;
+}
+
+.project__code {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=Projects.css.map */

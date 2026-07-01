@@ -1,3 +1,18 @@
+@keyframes border-spin {
+  to {
+    --angle: $full-circle-ang;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hero {
   padding-block: 4.5rem 7rem;
 }
@@ -106,16 +121,6 @@
   animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .hero__window {
     animation: none;

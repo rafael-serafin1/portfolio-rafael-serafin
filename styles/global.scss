@@ -21,7 +21,7 @@ body {
     @include mixins.apply(vars.$body-settings);
 }
 
-html, body, main, #root {
+html, body, #root {
     @include mixins.apply(vars.$root-settings);
 }
 

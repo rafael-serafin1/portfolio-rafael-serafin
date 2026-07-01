@@ -50,7 +50,15 @@
   color: #f4efe2;
 }
 
+.about__div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .about__facts {
+  width: 100%;
   display: grid;
   gap: 0;
   border: 1px solid #2c3140;

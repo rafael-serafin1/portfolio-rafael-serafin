@@ -11,7 +11,7 @@ const CHANNELS = [
   {
     label: 'linkedin',
     value: '/in/rafael-engel-serafin',
-    href: 'https://www.linkedin.com/in/rafael-engel-serafin',
+    href: 'https://www.linkedin.com/in/rafael-engel-serafin-33941b35a/',
     Icon: LinkedinIcon,
   },
   {

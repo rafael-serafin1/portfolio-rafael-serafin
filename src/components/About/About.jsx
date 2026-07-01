@@ -31,14 +31,16 @@ export default function About() {
           </p>
         </div>
 
-        <dl className="about__facts">
-          {FACTS.map((f) => (
-            <div className="about__fact" key={f.label}>
-              <dt className="mono">{f.label}</dt>
-              <dd>{f.value}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className='about__div'>
+          <dl className="about__facts">
+            {FACTS.map((f) => (
+              <div className="about__fact" key={f.label}>
+                <dt className="mono">{f.label}</dt>
+                <dd>{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   )

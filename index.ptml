@@ -1,0 +1,19 @@
+<!-- ARQUIVO DE TESTE DO PTML -->
+<?ptml encoding="UTF-8" terminal-resize="reflow"?>
+<terminal x-align="center">
+  <block title="status" border="rounded">
+    <column>
+      <text foreground="gold">sistema online</text>
+      <column>
+        <row gap="1">
+          <text>cpu</text>
+          <progress value="7" max="10" show-value="true" />
+        </row>
+        <row gap="1">
+          <text>ram</text>
+          <progress value="4" max="10" show-value="true" />
+        </row>
+      </column>
+    </column>
+  </block>
+</terminal>

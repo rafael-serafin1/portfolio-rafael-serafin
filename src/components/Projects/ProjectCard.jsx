@@ -7,14 +7,16 @@ export default function ProjectCard({ project }) {
         <span className="tw__dots">
           <span /><span /><span />
         </span>
-        <span className="tw__tab">{project.file}</span>
+        <span className="tw__tab">{project.file} -- </span>
         <span className="tw__meta">{project.lang}</span>
       </div>
 
       <div className="tw__body project__body">
-        <pre className="project__snippet mono" aria-hidden="true">
-          <code>{project.snippet}</code>
-        </pre>
+        <div className='project__code'>  
+          <pre className="project__snippet mono" aria-hidden="true">
+            <code>{project.snippet}</code>
+          </pre>
+        </div>
 
         <div className="project__content">
           <div className="project__heading">
@@ -34,7 +36,7 @@ export default function ProjectCard({ project }) {
           <div className="project__footer">
             <ul className="project__tags">
               {project.tags.map((t) => (
-                <li key={t}>{t}</li>
+                <li className='project__item' key={t}>{t}</li>
               ))}
             </ul>
             <a
@@ -48,6 +50,7 @@ export default function ProjectCard({ project }) {
           </div>
         </div>
       </div>
+      <br />
     </article>
   )
 }

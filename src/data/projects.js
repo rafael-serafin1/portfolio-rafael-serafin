@@ -6,7 +6,7 @@ export const projects = [
     full: 'Portable Terminal Markup Language',
     file: 'Render.fs',
     lang: 'F#',
-    tags: ['F#', '.NET', 'DSL', 'Parser', 'Compilers'],
+    tags: ['F#', '.NET', 'Parser', 'Compilers'],
     pitch: 'Uma linguagem de marcação declarativa — no estilo HTML+CSS — para construir interfaces de terminal.',
     description:
       'Em vez de montar telas de terminal na mão com códigos ANSI soltos, o PTML deixa descrever a interface como árvore de widgets. Um pipeline completo: lexer, parser recursivo, AST, motor de layout flexbox-like e um renderer que emite apenas o que mudou na tela.',
@@ -17,15 +17,21 @@ export const projects = [
       'Extensão própria de syntax highlighting para VS Code',
       'Renderer por diff: só repinta o que mudou no terminal',
     ],
-    snippet: `<?ptml encoding="UTF-8"?>
+    snippet: `<?ptml encoding="UTF-8" terminal-resize="reflow"?>
 <terminal x-align="center">
   <block title="status" border="rounded">
     <column>
-      <text foreground="amber">sistema online</text>
-      <row gap="2">
-        <text>cpu 73%</text>
-        <text>ram 41%</text>
-      </row>
+      <text foreground="gold">sistema online</text>
+      <column>
+        <row gap="1">
+          <text>cpu</text>
+          <progress value="7" max="10" show-value="true" />
+        </row>
+        <row gap="1">
+          <text>ram</text>
+          <progress value="4" max="10" show-value="true" />
+        </row>
+      </column>
     </column>
   </block>
 </terminal>`,
@@ -53,11 +59,11 @@ export const projects = [
     text: land(600ms);
     color: fadeIn(400ms);
   };
-  click {
+  onSing.click {
     transform: rotate(360deg, 800ms);
   };
 }`,
-    status: 'active',
+    status: 'estacionado por enquanto.',
     links: { github: 'https://github.com/rafael-serafin1/vectora' },
   },
   {
@@ -84,7 +90,7 @@ class PersonalController {
     return service.listarAlunos(id);
   }
 }`,
-    status: 'em evolução',
+    status: 'finalizado/em evolução',
     links: { github: 'https://github.com/rafael-serafin1/personal-api-app' },
   },
   {

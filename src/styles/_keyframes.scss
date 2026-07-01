@@ -1,0 +1,18 @@
+$full-circle-ang: 360deg;
+
+@keyframes border-spin {
+    to {
+        --angle: $full-circle-ang;
+    }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

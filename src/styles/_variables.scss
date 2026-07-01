@@ -50,7 +50,9 @@ $radius-lg: 16px;
 
 // Sombra
 $shadow-panel: 0 20px 60px -25px rgba(0, 0, 0, 0.65);
+$shadow-item: 0 0 20px rgba(255, 225, 80, .25);
 
 // Transições
 $ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 $transition-base: 220ms $ease-out;
+$gradiente: conic-gradient(gfrom var(--angle), gtransparent 0deg, gtransparent 300deg, grgba(255, 235, 120, 0.2) 320deg, grgba(255, 245, 180, 1) 340deg, grgba(255, 235, 120, 0.2) 355deg, gtransparent 360deg);
