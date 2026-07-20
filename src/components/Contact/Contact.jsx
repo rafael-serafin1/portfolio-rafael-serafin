@@ -42,7 +42,7 @@ export default function Contact() {
           </div>
           <div className="tw__body contact__body">
             <p className="contact__line mono">
-              <span className="contact__prompt">rafael@dev:~$</span> contact --list
+              <span className="contact__prompt">rafael@dev:~$</span> contact --list --all
             </p>
             <ul className="contact__list">
               {CHANNELS.map(({ label, value, href, Icon }) => (
