@@ -3,7 +3,7 @@
 
 // Barra de título estilo editor/terminal, reaproveitada em todo o site.
 // A aba mostra sempre o nome de arquivo REAL do projeto (Program.fs,
-// interpreter.ts, samplebot.py...) — não é decoração, é o artefato certo.
+// interpreter.ts, samplebot.py...)  não é decoração, é o artefato certo.
 .tw {
   @include m.window-chrome;
 }

@@ -11,7 +11,7 @@ const CHANNELS = [
   {
     label: 'linkedin',
     value: '/in/rafael-engel-serafin',
-    href: 'https://www.linkedin.com/in/rafael-engel-serafin-33941b35a/',
+    href: 'https://www.linkedin.com/in/rafaelengelserafin',
     Icon: LinkedinIcon,
   },
   {
@@ -30,7 +30,7 @@ export default function Contact() {
           <p className="section__eyebrow mono">contato</p>
           <h2 className="contact__title">Bora conversar sobre o próximo projeto?</h2>
           <p className="contact__lede">
-            Aberto a oportunidades de estágio e junior — em especial times que curtem
+            Aberto a oportunidades de estágio e junior  em especial times que curtem
             construir ferramentas, não só usá-las.
           </p>
         </div>

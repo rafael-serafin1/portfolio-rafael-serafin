@@ -33,7 +33,7 @@ export default function Hero() {
           </h1>
           <p className="hero__lede">
             Desenvolvedor universitário focado em desenvolvimento fullstack,
-            sistemas de terminal e APIs — do parser à produção.
+            sistemas de terminal e APIs  do parser à produção.
           </p>
           <div className="hero__cta">
             <a className="btn btn--primary" href="#projetos">

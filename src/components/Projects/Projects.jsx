@@ -10,7 +10,7 @@ export default function Projects() {
           <p className="section__eyebrow mono">projetos</p>
           <h2 className="projects__title">Cinco repositórios, cada um resolvendo um problema diferente.</h2>
           <p className="projects__lede">
-            Da linguagem de terminal ao bot de Discord — o código real por trás de cada aba.
+            Da linguagem de terminal ao bot de Discord  o código real por trás de cada aba.
           </p>
         </div>
 

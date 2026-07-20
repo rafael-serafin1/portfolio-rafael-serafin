@@ -17,7 +17,7 @@ export default function About() {
             Curiosidade técnica com queda para construir as próprias ferramentas.
           </h2>
           <p className="about__body">
-            Comecei resolvendo problemas com o que já existia — e reparei que os problemas
+            Comecei resolvendo problemas com o que já existia  e reparei que os problemas
             mais interessantes apareciam quando a ferramenta certa ainda não tinha sido escrita.
             Foi assim que nasceram o <strong>PTML</strong> e o <strong>Vectora</strong>: duas
             linguagens de domínio específico feitas para transformar interfaces verbosas em
