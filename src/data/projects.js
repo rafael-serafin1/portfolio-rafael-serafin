@@ -66,6 +66,52 @@ class PersonalController {
     links: { github: 'https://github.com/rafael-serafin1/personal-api-app' },
   },
   {
+    id: 'cli-todo-manager',
+    name: 'CLI Todo Manager',
+    full: 'Comando de terminal para manutenção de afazeres',
+    file: 'macros.h',
+    lang: 'C',
+    tags: ['ANSI C', 'Macros & XMacros', 'File Manipulation'],
+    pitch: 'Comando para terminal chamado `todo`, responsável por adicionar, remover, listar e checar tarefas/afazeres em projetos.',
+    description:
+      'Escrito inteiramente em C, apenas utilizando as bibliotecas do sistema, com suporte para diferentes sistemas operacionas.',
+    highlights: [
+      'Adicionar tarefas através do subcomando `add`',
+      'Marcar como feito tarefas através do índice',
+      'Configurações armazenadas em repositórios dentro do projeto',
+      'Totalmente procedural e rápido',
+    ],
+    snippet: `todo init; todo add "Bake a cake"; todo check "1"; todo list --all`,
+    status: 'finalizado',
+    links: { github: 'https://github.com/rafael-serafin1/cli-todo-manager' },
+  },
+  {
+    id: 'docitup',
+    name: 'Document It Up!',
+    full: 'Extensão para Visual Studio Code',
+    file: 'CmlParser.ts',
+    lang: 'TypeScript',
+    tags: ['TypeScript', 'Extension', 'Navigation', 'Documentation'],
+    pitch: 'Escreve animações CSS como seletor + gatilho + ação, sem event listener nenhum espalhado pelo código.',
+    description:
+      'Extensão para Visual Studio Code: focada em documentação de código inline e navegação por meio do workspace, tudo através de uma síntaxe de tags baseada na semântica da CML (Commentary Markup Language), desenvolvida para uso na extensão.',
+    highlights: [
+      'parser + providers próprios em TypeScript puro',
+      'Catálogo próprio com +10 tags diferentes com usos',
+      'Documentação inline com provedor de metadados sob demanda',
+      'Suporte a navegação do ambiente através de metadados definidos em linha',
+    ],
+    snippet: `
+    \/\/<label>HTTP_GET</label>
+    \/\/<desc>Região responsável por encapsular todas funções responsáveis pelo método HTTP GET</desc>
+    \/\/<span>
+    ...
+    \/\/</span>
+    `,
+    status: 'estável e utilizável',
+    links: { github: 'https://github.com/rafael-serafin1/document-it-up-vscode' },
+  },
+  {
     id: 'crud-tecnico',
     name: 'CRUD Técnico',
     full: 'Aplicação full-stack para academias',
@@ -87,63 +133,5 @@ class PersonalController {
 setTreinos(data)`,
     status: 'em evolução',
     links: { github: 'https://github.com/rafael-serafin1/crud-tecnico-application' },
-  },
-  {
-    id: 'vectora',
-    name: 'Vectora',
-    full: 'DSL declarativa de animações',
-    file: 'interpreter.ts',
-    lang: 'TypeScript',
-    tags: ['TypeScript', 'DSL', 'Compilers', 'Frontend'],
-    pitch: 'Escreve animações CSS como seletor + gatilho + ação, sem event listener nenhum espalhado pelo código.',
-    description:
-      'Segunda linguagem própria do portfólio: lexer, parser e um interpretador que traduz uma sintaxe curta em manipulação de DOM. Um catálogo com mais de 50 animações pré-construídas  e cada uma sabe automaticamente como se reverter.',
-    highlights: [
-      'Lexer + parser + interpreter próprios em TypeScript puro',
-      'Catálogo com 50+ animações classificadas por família/direção',
-      'Reversão automática  "entrada" e "saída" derivadas da mesma metadata',
-      'Suporte a seletores de tag, classe e id, com múltiplos gatilhos',
-    ],
-    snippet: `div {
-  window.onLoad {
-    text: land(600ms);
-    color: fadeIn(400ms);
-  };
-  onSing.click {
-    transform: rotate(360deg, 800ms);
-  };
-}`,
-    status: 'estacionado por enquanto.',
-    links: { github: 'https://github.com/rafael-serafin1/vectora' },
-  },
-  {
-    id: 'cli-todo-manager',
-    name: 'CLI Todo Manager',
-    full: 'Comando de terminal para manutenção de afazeres',
-    file: 'macros.h',
-    lang: 'C',
-    tags: ['ANSI C', 'Macros & XMacros', 'File Manipulation'],
-    pitch: 'Comando para terminal chamado `todo`, responsável por adicionar, remover, listar e checar tarefas/afazeres em projetos.',
-    description:
-      'Escrito inteiramente em C, apenas utilizando as bibliotecas do sistema, com suporte para diferentes sistemas operacionas.',
-    highlights: [
-      'Adicionar tarefas através do subcomando `add`',
-      'Marcar como feito tarefas através do índice',
-      'Configurações armazenadas em repositórios dentro do projeto',
-      'Totalmente procedural e rápido',
-    ],
-    snippet: `
-#define __TODO_CMDS_FUNC                \\
-    X("help", _todo_help(flags))        \\
-    X("version", _todo_version())       \\
-    X("init", _todo_init(argv))         \\
-    X("config", _todo_config())         \\
-    X("add", _todo_add(task))           \\
-    X("remove", _todo_remove(index))    \\
-    X("check", _todo_check(index))      \\
-    X("uncheck", _todo_uncheck(index))  \\
-    X("list", _todo_list(flags))         `,
-    status: 'finalizado',
-    links: { github: 'https://github.com/rafael-serafin1/cli-todo-manager' },
   },
 ]
