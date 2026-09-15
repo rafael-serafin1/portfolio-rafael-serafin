@@ -92,7 +92,7 @@ class PersonalController {
     file: 'CmlParser.ts',
     lang: 'TypeScript',
     tags: ['TypeScript', 'Extension', 'Navigation', 'Documentation'],
-    pitch: 'Escreve animações CSS como seletor + gatilho + ação, sem event listener nenhum espalhado pelo código.',
+    pitch: 'Permite navegação em documentação através de tags especiais em comentários.',
     description:
       'Extensão para Visual Studio Code: focada em documentação de código inline e navegação por meio do workspace, tudo através de uma síntaxe de tags baseada na semântica da CML (Commentary Markup Language), desenvolvida para uso na extensão.',
     highlights: [
@@ -102,11 +102,11 @@ class PersonalController {
       'Suporte a navegação do ambiente através de metadados definidos em linha',
     ],
     snippet: `
-    \/\/<label>HTTP_GET</label>
-    \/\/<desc>Região responsável por encapsular todas funções responsáveis pelo método HTTP GET</desc>
-    \/\/<span>
-    ...
-    \/\/</span>
+\/\/<label>HTTP_GET</label>
+\/\/<desc>Região responsável por encapsular todas funções responsáveis pelo método HTTP GET</desc>
+\/\/<span>
+...
+\/\/</span>
     `,
     status: 'estável e utilizável',
     links: { github: 'https://github.com/rafael-serafin1/document-it-up-vscode' },
